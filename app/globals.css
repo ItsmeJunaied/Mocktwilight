@@ -1,30 +1,122 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* styles/globals.css */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../public/slick.653a4cbb.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'MyCustomFont2';
+  src: url('../public/nKKU-Go6G5tXcr4uPhWnVaE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-font-1 {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+.custom-font-2 {
+  font-family: 'MyCustomFont2', sans-serif;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'MyCustomFont', sans-serif;
 }
+
+.swiper {
+  /* height: 635px; */
+  border-radius: 6px;
+  margin-top: 18px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+  border-radius: 100%;
+  background-color: #23232369;
+  width: fit-content;
+  height: fit-content;
+  padding: 30px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #DAB419 !important;
+}
+
+.swiper-pagination-clickable,
+.swiper-pagination-bullet {
+  padding: 6px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.slick-slide>div {
+  margin: 0 30px;
+}
+
+.slick-slide>div:nth-child(1) {
+  margin-left: 0;
+}
+
+.slick-list {
+  margin-right: -30px;
+}
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.icon {
+  color: #8F8F8F;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: white;
+}
+
+.image-container-hover:hover .image-container {
+  opacity: 0;
+}
+
+.image-container-hover:hover .image-container-hover {
+  opacity: 1;
+}
+
+.countSection {
+  background-image: url(../public/countSection.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 
 @layer utilities {
   .text-balance {
