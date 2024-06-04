@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import useProducts from '../API/useProducts';
 
 interface Product {
-    id: number; // Assuming the ID is a number
+    id: number;
     images: { url: string }[];
     title_name: string;
     price: number;
