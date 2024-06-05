@@ -27,13 +27,6 @@ const ShowcaseSlider = () => {
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
 
-    const handleMouseEnter = (id: number) => {
-        setHovered(prevHovered => ({ ...prevHovered, [id]: true }));
-    };
-
-    const handleMouseLeave = (id: number) => {
-        setHovered(prevHovered => ({ ...prevHovered, [id]: false }));
-    };
 
     const latestProducts = products.filter(item => item?.category.name === 'Furniture');
 
@@ -46,6 +39,21 @@ const ShowcaseSlider = () => {
     };
     return (
         <div className='w-[280px] bg-[#F6F6F6] h-full'>
+            <style>{`
+                .slick-prev:before,
+                .slick-next:before {
+                    font-size: 60px !important;
+                    color: #AAAAAA !important;
+                }
+
+                .slick-prev:before {
+                    margin-left: -40px;
+                }
+
+                .slick-next:before {
+                    margin-right: -40px;
+                }
+            `}</style>
             <Slider {...settings}>
                 {latestProducts.map(product => (
                     <div key={product.id}>

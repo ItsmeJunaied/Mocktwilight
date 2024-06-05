@@ -117,22 +117,20 @@ body {
   background-position: center;
 }
 
-.slick-prev:before,
-.slick-next:before{
-  /* width: 100px; */
-  /* margin-left: -40px; */
-  
-  font-size: 60px !important;
-  color: #AAAAAA !important;
-  /* background-color: red; */
+.splide__slide img {
+  width: 100%;
+  height: auto;
 }
 
-.slick-prev:before{
-  margin-left: -40px;
+.splide__slide {
+  opacity: 0.3;
 }
-.slick-next:before{
-  margin-right: -40px;
+
+
+.splide__slide.is-active {
+  opacity: 1;
 }
+
 
 @layer utilities {
   .text-balance {
